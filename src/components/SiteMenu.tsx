@@ -92,9 +92,9 @@ export default function SiteMenu() {
             </nav>
 
             <div className="grid w-full max-w-4xl gap-6 pb-10 text-sm text-zinc-300 md:grid-cols-3">
-              <div className="text-center md:text-left">Istanbul / TR</div>
+              <div className="text-center md:text-left">Darmstadt / DE</div>
               <div className="text-center">
-                ceylinekinci@sabanciuniv.edu<br />+90 538 020 52 18
+                ceylinekinci@sabanciuniv.edu<br />+49 171 3293847
               </div>
               <div className="space-x-4 text-center md:text-right">
                 <a href="https://www.linkedin.com/in/ceylin-ekinci/" className="underline" target="_blank" rel="noreferrer" data-cursor="link">

@@ -1,0 +1,37 @@
+---
+title: "Mention Plugin for Summernote"
+cover: "/images/projects/p9.jpg"
+summary: "A custom @-mention plugin I built at work instead of buying a paid rich-text editor."
+---
+
+**When:** 2025, while working as a Software Engineer at Bexfa Technology
+
+**Tech:** JavaScript, HTML, CSS, jQuery — integrated into an ASP.NET web application
+
+**Source:** [github.com/jlinie/mention-plugin-](https://github.com/jlinie/mention-plugin-)
+
+## The Problem
+
+Our web application needed @-mention functionality in its text editor —
+type "@", get a dropdown of users, pick one, and it becomes a styled mention
+inside the text. The open-source Summernote editor we used has no built-in
+mention support, and the commercial editors that do come with hefty license
+fees.
+
+## What I Built
+
+<TextWithImage image="/images/projects/p9-detail.jpg">
+  Instead of paying for a proprietary editor, I built the feature myself: a
+  custom Summernote plugin that listens for the "@" trigger, shows a
+  searchable suggestion dropdown, and inserts the selected user as a styled
+  mention node — handling the fun edge cases of caret position, keyboard
+  navigation, and text deletion inside a contenteditable. The repo includes
+  a sample usage demo so others facing the same gap can drop it in.
+</TextWithImage>
+
+## Why I Like This One
+
+It's a small project, but it captures something I value: reading a
+third-party library deeply enough to extend it, and solving a real business
+need with a few hundred lines of code instead of a license fee. Sometimes
+the best engineering decision is the boring, free one.

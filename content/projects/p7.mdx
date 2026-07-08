@@ -1,0 +1,27 @@
+---
+title: "Client-Server Network Application"
+cover: "/images/projects/p7.jpg"
+summary: "A socket-based client-server application built in C# for my Computer Networks course."
+---
+
+**When:** Fall 2023, Computer Networks course (CS408) at Sabancı University
+
+**Tech:** C#, TCP sockets, multithreading
+
+**Source:** [github.com/jlinie/CS408--Network](https://github.com/jlinie/CS408--Network)
+
+## What It Is
+
+A client-server application built from the ground up on raw TCP sockets in
+C#: a server managing multiple concurrent client connections, and clients
+communicating with it over a custom protocol — no frameworks doing the heavy
+lifting.
+
+## What I Learned
+
+Building networking from the socket level up demystified everything that web
+frameworks normally hide: connection lifecycles, message framing, handling
+clients that disconnect mid-conversation, and the concurrency headaches of
+multiple simultaneous connections. That low-level understanding later made
+my professional backend work — REST APIs, message queues like Kafka and
+RabbitMQ — feel much less like magic.

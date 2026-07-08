@@ -1,0 +1,41 @@
+---
+title: "Ollama vs Logistic Regression"
+cover: "/images/projects/p4.jpg"
+summary: "Can a local LLM beat a TF-IDF + logistic regression baseline on 660K-sample text classification?"
+---
+
+**When:** 2025
+
+**Tech:** Python, Scikit-learn (TF-IDF, logistic regression), Ollama (Llama 3.2), few-shot prompting, Makefile, Docker
+
+**Source:** [github.com/jlinie/LLM-textclassification](https://github.com/jlinie/LLM-textclassification)
+
+## The Question
+
+Everyone reaches for LLMs these days — but does a locally-run LLM actually
+beat a well-tuned classical baseline on large-scale text classification? I
+benchmarked both sides on 660K samples across 77 categories, comparing not
+just accuracy but robustness, speed, and cost.
+
+## How It Works
+
+<TextWithImage image="/images/projects/p4-detail.jpg">
+  The baseline: a TF-IDF vectorizer feeding a multinomial logistic regression,
+  with a full precision/recall/F1 report per category. The challenger: Llama
+  3.2 served locally via Ollama, using few-shot prompts enriched with entity
+  annotations. A hybrid routing trick keeps things efficient — typical
+  examples are handled cheaply, while only "atypical" texts (low TF-IDF
+  confidence) get sent to the LLM, with API calls running in parallel and
+  latency tracked throughout.
+</TextWithImage>
+
+The whole pipeline is reproducible with a Makefile (`make split`, `make
+train`, `make eval`, `make llm`) and containerized with Docker.
+
+## What I Learned
+
+Training on a very large, imbalanced dataset with limited local compute
+taught me more about practical ML than any textbook: LLM inference is slow
+and costly at scale, classical baselines are shockingly hard to beat when
+tuned well, and fair evaluation means looking far beyond a single accuracy
+number.

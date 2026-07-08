@@ -1,0 +1,43 @@
+---
+title: "Diffusion Models"
+cover: "/images/research/r5.jpg"
+summary: "Generative modeling by learning to denoise — and what diffusion can do beyond images."
+---
+
+**Status:** Active research interest — currently in the "reading everything" phase
+
+## The Question
+
+Diffusion models generate data by learning to reverse a gradual noising
+process — and they've become the dominant approach in image generation. What
+fascinates me is the elegance of the framing (generation as iterative
+denoising) and the open frontier beyond images: diffusion for time series
+forecasting, imputation, and data augmentation, which connects directly to
+my other interests.
+
+## Why Diffusion + Time Series?
+
+Probabilistic forecasting needs more than point predictions — it needs
+distributions over possible futures. Diffusion models are natural
+distribution learners, and using them to sample plausible future
+trajectories (or to generate synthetic training series for augmentation) is
+an active, exciting research direction I want to explore hands-on.
+
+## Papers That Shaped My Thinking
+
+- [*Denoising Diffusion Probabilistic Models*](https://arxiv.org/abs/2006.11239)
+  (Ho et al., 2020) — the DDPM paper that ignited the field: a simple
+  denoising objective yielding stunning generative quality. It taught me
+  that the "right" training objective can matter more than architectural
+  cleverness — the U-Net wasn't new; the objective was.
+- [*Denoising Diffusion Implicit Models*](https://arxiv.org/abs/2010.02502)
+  (Song et al., 2021) — is about accelerating sampling from hundreds of
+  steps to a handful via non-Markovian processes. It taught me that
+  diffusion's biggest practical weakness — slow inference — is an
+  optimization problem, which ties beautifully into my interest in
+  efficiency.
+- [*CSDI: Conditional Score-based Diffusion Models for Probabilistic Time
+  Series Imputation*](https://arxiv.org/abs/2107.03502) (Tashiro et al.,
+  2021) — is about applying diffusion to fill gaps in multivariate time
+  series. It taught me that diffusion is a general recipe, not an image
+  trick — and it's the bridge between this interest and my forecasting work.

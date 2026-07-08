@@ -1,29 +1,39 @@
 ---
-title: "Personal Website"
-date: "2025-11-05"
-summary: "A fast, MDX-powered portfolio built with Next.js and deployed to GitHub Pages."
-cover: "/pic13.png"
-tags: ["Next.js", "MDX", "Design", "Deployment"]
-titleClass: "text-4xl md:text-5xl"
-bodyFont: '"Times New Roman", Times, serif'
-imageClass: "my-6 mx-auto w-full max-w-md rounded-xl border border-black/20 shadow"
-contentMaxWidth: "max-w-4xl"
+title: "Multivariate Time Series Forecasting"
+cover: "/images/projects/p1.jpg"
+summary: "Deep learning models forecasting hourly operational load — my ongoing course project at TU Darmstadt."
 ---
 
-> A minimalist portfolio with playful interactions and a simple authoring flow.
+**When:** Summer semester 2026 — ongoing (deadline September 2026)
 
-## Overview
-This site is my public notebook: projects, research notes, and a journal.  
-Goals: **fast**, **low-maintenance**, **nice to use**, and **easy to publish**.
+**Context:** Course project for my deep learning class at TU Darmstadt
 
-- **Framework:** Next.js (App Router) → **static export**
-- **Authoring:** Markdown/MDX files under `/content`
-- **Hosting:** GitHub Pages (via GitHub Actions)
-- **Styling:** Tailwind CSS
-- **Extras:** custom cursor, parallax wall on the home, menu/topbar state, color-palette cards
+**Tech:** Python, PyTorch, Pandas, Hugging Face (dataset & leaderboard)
 
+## The Task
 
+Predict the future hourly operational load index for many parallel time
+series at once. The forecast horizon is 336 hours per series, filled by
+rolling a 24-step model forward — so small errors compound fast, and
+architecture choices really matter.
 
-## Why MDX?
-I wanted writing to be as simple as “add a file and commit”. MDX lets me mix markdown with React when needed:
+Models are scored against hidden validation labels on a public leaderboard
+using MAE, MSE, RMSE, MAPE, sMAPE, and WAPE. Competing against fellow
+students in real time is equal parts motivating and humbling.
 
+## What I'm Working On
+
+<TextWithImage image="/images/projects/p1-detail.jpg">
+  I started from classical baselines to understand the data, and I'm now
+  experimenting with deep architectures in PyTorch — comparing recurrent and
+  transformer-based designs — along with data augmentation strategies for
+  time series. The whole pipeline needs to be reproducible and run offline
+  for the final evaluation, so clean engineering matters as much as model
+  accuracy.
+</TextWithImage>
+
+## Why I Love It
+
+This project sits exactly at the intersection of my interests: time series,
+deep learning architectures, and learning under real constraints. I'll share
+results and lessons learned here once the leaderboard closes!

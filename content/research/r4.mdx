@@ -1,0 +1,38 @@
+---
+title: "Data Augmentation"
+cover: "/images/research/r4.jpg"
+summary: "Getting more out of limited data — especially for temporal data, where vision tricks don't transfer."
+---
+
+**Status:** Active research interest
+
+## The Question
+
+When data is limited, expensive, or imbalanced, augmentation is often the
+cheapest way to better generalization. But augmentation is domain-specific:
+the crop/flip/rotate playbook from computer vision breaks temporal structure
+completely. What does *principled* augmentation look like for time series —
+and when does augmentation help versus quietly distort the data
+distribution?
+
+## Where I Apply It
+
+Directly in my forecasting project: experimenting with augmentation
+strategies for multivariate temporal data, where any transformation has to
+respect seasonality, trend, and cross-series relationships. It's a perfect
+sandbox, because the leaderboard immediately tells me whether an idea helped
+or just felt clever.
+
+## Papers That Shaped My Thinking
+
+- [*Time Series Data Augmentation for Deep Learning: A Survey*](https://arxiv.org/abs/2002.12478)
+  (Wen et al., 2020) — is about the full landscape of temporal augmentation:
+  jittering, scaling, window warping, frequency-domain methods, and
+  generative approaches. It taught me that time series augmentation is a
+  design space of its own, not a port of vision techniques.
+- [*mixup: Beyond Empirical Risk Minimization*](https://arxiv.org/abs/1710.09412)
+  (Zhang et al., 2018) — is about training on convex combinations of
+  examples and labels. It taught me that augmentation isn't only about
+  invariances — it can directly reshape the loss landscape and act as a
+  powerful regularizer, which reframed how I think about what augmentation
+  is *for*.

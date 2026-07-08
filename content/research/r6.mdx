@@ -1,0 +1,44 @@
+---
+title: "Word Embeddings & word2vec"
+cover: "/images/research/r7.jpg"
+summary: "Currently learning how meaning becomes geometry — and why king − man + woman ≈ queen."
+---
+
+**Status:** Currently learning (2026)
+
+## The Question
+
+How does a neural network turn words into numbers that actually *mean*
+something? word2vec showed that if you train a simple model to predict
+words from their context, the resulting vectors organize themselves into a
+space where semantic relationships become geometric ones — similar words
+cluster together, and analogies become vector arithmetic.
+
+I'm studying this now, and honestly, it's the closest thing to magic I've
+seen in ML: nobody told the model that Paris relates to France the way Rome
+relates to Italy. It discovered that structure purely from co-occurrence
+statistics.
+
+## Why It Matters Beyond Words
+
+Embeddings are the quiet foundation of everything I care about: transformers
+start with an embedding layer, multimodal models align embeddings across
+data types, and even time series methods increasingly borrow the
+"tokenize-then-embed" recipe. Understanding word2vec properly means
+understanding the representational bedrock under modern deep learning.
+
+## Papers That Shaped My Thinking
+
+- [*Linguistic Regularities in Continuous Space Word Representations*](https://aclanthology.org/N13-1090/)
+  (Mikolov et al., 2013) — is about the famous discovery that word vectors
+  encode analogies as arithmetic: vector("king") − vector("man") +
+  vector("woman") lands near vector("queen"). It taught me that
+  representations learned for one objective (prediction) can capture
+  structure nobody explicitly asked for — meaning itself can emerge as
+  geometry.
+- [*Efficient Estimation of Word Representations in Vector Space*](https://arxiv.org/abs/1301.3781)
+  (Mikolov et al., 2013) — the original word2vec paper introducing the
+  Skip-gram and CBOW architectures. It taught me that radical simplification
+  can be a superpower: by stripping away hidden layers, word2vec trained on
+  billions of words and beat far more complex models — efficiency enabling
+  scale, scale enabling quality.

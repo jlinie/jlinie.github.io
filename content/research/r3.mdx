@@ -1,0 +1,36 @@
+---
+title: "Transformer Architectures"
+cover: "/images/research/r3.jpg"
+summary: "Understanding attention from the inside: what it buys, what it costs, and where it belongs."
+---
+
+**Status:** Active research interest
+
+## The Question
+
+Transformers conquered language, then vision — but *why* they work so well,
+where attention genuinely earns its cost, and how the architecture should be
+adapted outside NLP are still fascinatingly open questions. I want to
+understand transformers at the mechanism level, not just as a black box to
+fine-tune.
+
+## How I'm Studying Them
+
+My deep learning coursework at TU Darmstadt covers the architectural
+foundations, and my forecasting project gives me a place to probe them
+empirically: comparing transformer variants against recurrent and linear
+models on the same task, where the differences (and the costs) become
+concrete.
+
+## Papers That Shaped My Thinking
+
+- [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762)
+  (Vaswani et al., 2017) — the original transformer paper: replacing
+  recurrence entirely with self-attention. It taught me that architectural
+  revolutions come from questioning assumptions everyone shares — nobody
+  thought you could just delete recurrence from sequence modeling.
+- [*An Image is Worth 16x16 Words*](https://arxiv.org/abs/2010.11929)
+  (Dosovitskiy et al., 2021) — the Vision Transformer, treating image
+  patches as tokens. It taught me how transferable the transformer recipe
+  is once you find the right tokenization for a new domain — a lesson I now
+  apply when thinking about time series as token sequences.

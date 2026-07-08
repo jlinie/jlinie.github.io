@@ -1,4 +1,30 @@
+// src/components/Mdx.tsx
 import { MDXRemote } from "next-mdx-remote/rsc";
+
+export function ImageRow({ images }: { images: string[] }) {
+  return (
+    <div className="my-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+      {images.map((src) => (
+        <img key={src} src={src} className="rounded-lg object-cover" alt="" />
+      ))}
+    </div>
+  );
+}
+
+export function TextWithImage({
+  image,
+  children,
+}: {
+  image: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="my-8 grid items-center gap-8 md:grid-cols-2">
+      <div>{children}</div>
+      <img src={image} className="rounded-xl object-cover" alt="" />
+    </div>
+  );
+}
 
 export default function Mdx({
   source,
@@ -20,6 +46,8 @@ export default function Mdx({
         img: (props) => <img {...props} className={imageClass} />,
         a: (props) => <a {...props} className="underline" />,
         ul: (props) => <ul className="mb-4 list-disc pl-6 space-y-1" {...props} />,
+        ImageRow,
+        TextWithImage,
       }}
     />
   );
